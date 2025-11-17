@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Seja um Voluntário/Apoiador</title>
+</head>
+<body>
+    <header>
+        <nav>...</nav>
+    </header>
+
+    <main>
+        <h1>Junte-se à Causa: Cadastro de Voluntários e Apoiadores</h1>
+        
+        <section>
+            <h2>Preencha Seus Dados</h2>
+            
+            <form action="/processa-cadastro" method="POST">
+                
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome completo">
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                    
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required 
+                           pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                           title="Formato de CPF: 000.000.000-00"
+                           placeholder="000.000.000-00">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required
+                           pattern="\(\d{2}\) \d{5}-\d{4}"
+                           title="Formato de Telefone: (00) 90000-0000"
+                           placeholder="(00) 90000-0000">
+
+                    <label for="dataNasc">Data de Nascimento:</label>
+                    <input type="date" id="dataNasc" name="dataNasc" required>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+                    
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required
+                           pattern="\d{5}-\d{3}"
+                           title="Formato de CEP: 00000-000"
+                           placeholder="00000-000">
+
+                    <label for="endereco">Rua, Número e Complemento:</label>
+                    <input type="text" id="endereco" name="endereco" required placeholder="Rua, 123 - Apto 404">
+
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required placeholder="Ex: São Paulo">
+
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione seu Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="SP">São Paulo</option>
+                        </select>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Área de Interesse</legend>
+                    <p>Como você gostaria de ajudar?</p>
+                    <input type="checkbox" id="voluntario" name="interesse" value="voluntario">
+                    <label for="voluntario">Voluntariado em Projetos</label><br>
+                    
+                    <input type="checkbox" id="doador" name="interesse" value="doador">
+                    <label for="doador">Doação e Apoio Financeiro</label><br>
+
+                    <label for="observacoes">Observações (opcional):</label>
+                    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                </fieldset>
+
+                <button type="submit">Finalizar Cadastro</button>
+                <button type="reset">Limpar Formulário</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <small>...</small>
+    </footer>
+</body>
+</html>
